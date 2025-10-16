@@ -1,0 +1,21 @@
+/* Inputs más cortos (largo/ancho) */
+  #exampleInputName1,
+  #exampleInputEmail1 {
+    width: 450px;   /* ancho horizontal */
+    height: 30px;   /* alto de la caja */
+    font-size: 14px; /* tamaño de letra */
+  }
+
+  /* Textarea más grande */
+  #mensaje {
+    width: 450px;   /* ancho horizontal */
+    height: 150px;  /* alto de la caja */
+    resize: both;   /* permitir que el usuario lo redimensione */
+  }
+
+
+
+
+
+
+
