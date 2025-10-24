@@ -1,8 +1,7 @@
-/* estilos.css */
 .mi-header {
-  background-color: #1c9ada; /* similar a bg-dark */
-  color: white !important;   /* similar a text-white */
-  padding: 1rem;               /* similar a p-3 */
+  background-color: #1c9ada;
+  color: white !important;
+  padding: 1rem;
   position: sticky;
   top: 0;
   z-index: 1020;
@@ -10,12 +9,12 @@
 
 .logo-img {
   height: 40px;
-  margin-right: 0.5rem;   /*reemplaza el me-2 de bootstrap*/
+  margin-right: 0.5rem;
 }
 
 .header-title {
   margin-bottom: 0;
-  font-size: 1.25rem; /* equivalente a h5 */
+  font-size: 1.25rem;
 }
 
 .flex-center {
