@@ -44,18 +44,19 @@
     margin-bottom: 15px;
   }
 
+  #contenido {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+    padding: 20px;
+    background-color: #ffffff;
+  }
+
   #contenido h1,h2{
       font-family: 'Poppins', sans-serif;
       color: #1c9ada !important;
       font-weight: 600;
       letter-spacing: 0.5px;
       margin-bottom: 10px;
-  }
-
-  #contenido {
-    margin-left: 200px;
-    padding: 20px;
-    background-color: #ffffff;
   }
 
   .libro-img:hover {

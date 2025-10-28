@@ -70,12 +70,12 @@
         <div class="card border-secondary">
           <h5>Contacto</h5>
           <p>¿Querés comunicarte con nosotros? Encontrá el formulario acá.</p>
-          <a href="#" data-src="Index/contacto.html" class="btn btn-outline-primary card-link">Ir a Formulario</a>
+          <a href="#" data-src="Index/contacto.html" class="btn btn-outline-primary">Ir a Formulario</a>
         </div>
         <div class="card border-secondary">
           <h5>Recomendados</h5>
           <p>Descubrí los libros más valorados por nuestros estudiantes y docentes.</p>
-          <a href="#" data-src="Categorias/Recomendados.html" class="btn btn-outline-success card-link">Ver Recomendados</a>
+          <a href="#" data-src="Categorias/Recomendados.html" class="btn btn-outline-success">Ver Recomendados</a>
         </div>
         <div class="card border-secondary">
           <h5>Instituto</h5>
@@ -88,6 +88,7 @@
     <!-- Script para el content -->
     <script>
       const contenido = document.getElementById('contenido');
+
       document.addEventListener('click', function(e) {
         const link = e.target.closest('[data-src]');
         if (!link) return;
@@ -100,7 +101,15 @@
             return response.text();
           })
           .then(html => {
-            contenido.innerHTML = html;
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+
+            const nuevoContenido = doc.querySelector('#contenido');
+            if (nuevoContenido) {
+              contenido.innerHTML = nuevoContenido.innerHTML;
+            } else {
+              contenido.innerHTML = html;
+            }
           })
           .catch(error => {
             contenido.innerHTML = `<p class="text-danger">Error al cargar la categoría: ${error.message}</p>`;
