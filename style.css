@@ -1,0 +1,89 @@
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    margin: 40px auto 20px auto;
+  }
+
+  .carousel-control-prev {
+    position: absolute;
+    left: -10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+  }
+
+  .carousel-control-next {
+    position: absolute;
+    right: -10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+  }
+
+  .carousel-container:hover .carousel-control-prev,
+  .carousel-container:hover .carousel-control-next {
+    opacity: 1;
+  }
+
+  .card-group {
+    width: 100%;
+    margin: 0 auto 40px auto;
+  }
+
+  .card {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .card h5 {
+    margin-bottom: 15px;
+  }
+
+  #contenido h1,h2{
+      font-family: 'Poppins', sans-serif;
+      color: #1c9ada !important;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+  }
+
+  #contenido {
+    margin-left: 200px;
+    padding: 20px;
+    background-color: #ffffff;
+  }
+
+  .libro-img:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /*cambia el puntero para hacer notar que es un botón*/ 
+  .logo-img {
+    cursor: pointer;
+  }
+
+  /* Estilo para el botón  */
+  .custom-hover:hover {
+    background-color: #6c757d;
+    color: white;
+    box-shadow: 0 0 10px rgba(108, 117, 125, 0.8);
+    transition: all 0.3s ease;
+  }
+
+  /* Rotacion de la flecha */
+  .custom-hover i {
+    display: inline-block;
+    transition: transform 0.6s ease-in-out;
+  }
+
+  .custom-hover:hover i {
+    transform: rotate(360deg);
+  }
